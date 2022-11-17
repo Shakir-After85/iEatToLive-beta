@@ -7,8 +7,9 @@ export const Home = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="text-center mt-5">
+    <div className="bg-white text-center mt-5 mx-5 h-auto">
       <h1>iEat To Live</h1>
+
       <p>
         <nav className="navbar navbar-light bg-light">
           <div className="container-fluid justify-content-center">

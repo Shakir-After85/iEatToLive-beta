@@ -1,3 +1,9 @@
 body {
   background-image: url("https://hips.hearstapps.com/hmg-prod/images/fresh-vegetables-fruits-beans-and-nuts-on-gray-royalty-free-image-1666727295.jpg?crop=0.77563xw:1xh;center,top&resize=1200:*");
 }
+
+.map {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}

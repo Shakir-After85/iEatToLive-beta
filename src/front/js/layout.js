@@ -10,7 +10,6 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { CitySelector } from "./pages/citySelector";
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
 
 //create your first component
 const Layout = () => {

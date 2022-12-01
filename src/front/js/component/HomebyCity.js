@@ -1,4 +1,5 @@
 import React from "react";
+import Map from "./googlemap.js";
 
 export const HomeByCity = (props) => {
   return (
@@ -22,6 +23,7 @@ export const HomeByCity = (props) => {
           </div>
         </nav>
         <img src="" />
+        <Map lat={props.lat} lng={props.lng} zoom={props.zoom} />
       </p>
     </div>
   );

@@ -9,11 +9,15 @@ export const Home = () => {
   const params = useParams();
   switch (params.city) {
     case "ny-city":
-      return <HomeByCity city="NY" />;
+      return <HomeByCity lat={40.73061} lng={-73.935242} zoom={10} city="NY" />;
     case "miami":
-      return <HomeByCity city="Miami" />;
+      return (
+        <HomeByCity lat={25.761681} lng={-80.191788} zoom={10} city="Miami" />
+      );
     case "atlanta":
-      return <HomeByCity city="ATL" />;
+      return (
+        <HomeByCity lat={33.753746} lng={-84.38633} zoom={10} city="ATL" />
+      );
     default:
       return <Link to="/">Choose a city</Link>;
   }

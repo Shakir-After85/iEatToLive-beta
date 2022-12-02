@@ -4,7 +4,7 @@ import Map from "./googlemap.js";
 export const HomeByCity = (props) => {
   return (
     <div className="bg-white text-center mt-5 mx-5 h-auto">
-      <h1 className="home-title">iEat To Live {props.city}</h1>
+      <h1 className="home-title">iEatToLive {props.city}</h1>
 
       <p>
         <nav className="navbar navbar-light bg-light">

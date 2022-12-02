@@ -27,8 +27,9 @@ export const Navbar = () => {
       </nav>
       <div className="container">
         <Link to="/">
-          <span className="navbar-brand mb-0 h1">iEat To Live</span>
+          <span className="navbar-brand mb-0 h1">iEatToLive </span>
         </Link>
+        <span> Healthier Life. Better Living </span>
         <div className="ml-auto">
           <Link to="/demo">
             <button className="btn btn-primary">Login/Sign Up</button>

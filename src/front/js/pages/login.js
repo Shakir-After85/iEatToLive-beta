@@ -1,10 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const navigate = useNavigate();
   function handleSubmit() {
-    navigate("/home/ny-city");
+    navigate("/city-selector");
   }
   return (
     <div className="container w-50 pt-5">
@@ -34,14 +35,17 @@ export const Login = () => {
           />
         </div>
         <div className="mb-3 form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-          />
-          <label className="form-check-label" for="exampleCheck1">
-            Keep me signed in
-          </label>
+          <div>
+            <input
+              type="checkbox"
+              className="form-check-input"
+              id="exampleCheck1"
+            />
+            <label className="form-check-label" for="exampleCheck1">
+              Keep me signed in
+            </label>
+          </div>
+          <Link to="/login">SignUp</Link>
         </div>
         <button type="submit" className="btn btn-primary">
           Submit

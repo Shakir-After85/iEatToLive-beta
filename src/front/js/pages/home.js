@@ -3,6 +3,7 @@ import { Context } from "../store/appContext";
 import { useParams } from "react-router-dom";
 import "../../styles/home.css";
 import { HomeByCity } from "../component/HomebyCity";
+import { MapsAPI } from "../component/MapsAPI";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);

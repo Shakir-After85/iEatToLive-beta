@@ -11,7 +11,16 @@ const Map = (props) => {
   return (
     <div className="map">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyCLFAB6OWwi5dxEvK0fxGC-4jn7DTb29Eg" }}
+        onClick={(event) => {
+          setMarkers((current) => [
+            ...current,
+            {
+              lat: event.latLng.lat(),
+              lng: event.latLng.lng(),
+            },
+          ]);
+        }}
+        bootstrapURLKeys={{ key: "AIzaSyCa1yoVQ6mqB2kjzQ8zYVmTE2nXL78_W0M" }}
         defaultCenter={center}
         defaultZoom={props.zoom}
       />

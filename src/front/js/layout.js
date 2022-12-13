@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./pages/home";
-import { Demo } from "./pages/demo";
+
 import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 
@@ -12,6 +12,7 @@ import { Footer } from "./component/footer";
 import { CitySelector } from "./pages/citySelector";
 import { Login } from "./pages/login";
 import { SignUp } from "./pages/signup";
+import { Recipes } from "./pages/Recipes";
 
 //create your first component
 const Layout = () => {
@@ -27,7 +28,7 @@ const Layout = () => {
           <Routes>
             <Route element={<CitySelector />} path="/city-selector" />
             <Route element={<Home />} path="/home/:city" />
-            <Route element={<Demo />} path="/demo" />
+            <Route element={<Recipes />} path="/recipes" />
             <Route element={<Single />} path="/single/:theid" />
             <Route element={<Login />} path="/" />
             <Route element={<SignUp />} path="/signup" />

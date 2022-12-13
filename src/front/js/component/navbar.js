@@ -6,8 +6,10 @@ export const Navbar = () => {
     <nav className="navbar navbar-light bg-light">
       <div className="collapse" id="navbarToggleExternalContent">
         <div className="bg-dark p-4">
-          <h5 className="text-white h4">Collapsed content</h5>
-          <span className="text-muted">Toggleable via the navbar brand.</span>
+          <h5 className="text-white h4">Links</h5>
+          <Link to="/recipes">
+            <span className="text-muted">Recipes</span>
+          </Link>
         </div>
       </div>
       <nav className="navbar navbar-dark bg-warning">
@@ -31,9 +33,7 @@ export const Navbar = () => {
         </Link>
         <span> Healthier Life. Better Living </span>
         <div className="ml-auto">
-          <Link to="/demo">
-            <button className="btn btn-primary">Login/Sign Up</button>
-          </Link>
+          <button className="btn btn-primary">Log Out</button>
         </div>
       </div>
     </nav>

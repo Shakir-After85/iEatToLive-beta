@@ -9,7 +9,7 @@ const Map = (props) => {
   };
 
   return (
-    <div className="map">
+    <div className="map w-100">
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyCLFAB6OWwi5dxEvK0fxGC-4jn7DTb29Eg" }}
         defaultCenter={center}

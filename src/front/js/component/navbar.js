@@ -1,39 +1,69 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+  const navigate = useNavigate();
+  function logOut() {
+    localStorage.clear();
+    navigate("/");
+  }
+
   return (
     <nav className="navbar navbar-light bg-light">
-      <div className="collapse" id="navbarToggleExternalContent">
-        <div className="bg-dark p-4">
-          <h5 className="text-white h4">Links</h5>
-          <Link to="/recipes">
-            <span className="text-muted">Recipes</span>
-          </Link>
-        </div>
+      <div>
+        <nav className="navbar navbar-dark ">
+          <div className="container-fluid">
+            <button
+              className="navbar-toggler bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent"
+              aria-controls="navbarToggleExternalContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </nav>
       </div>
-      <nav className="navbar navbar-dark bg-warning">
-        <div className="container-fluid">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarToggleExternalContent"
-            aria-controls="navbarToggleExternalContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
+
       <div className="container">
-        <Link to="/">
+        <Link to="/city-selector">
           <span className="navbar-brand mb-0 h1">iEatToLive </span>
         </Link>
         <span> Healthier Life. Better Living </span>
         <div className="ml-auto">
-          <button className="btn btn-primary">Log Out</button>
+          <button onClick={() => logOut()} className="btn btn-primary">
+            Log Out
+          </button>
+        </div>
+      </div>
+
+      <div className="collapse" id="navbarToggleExternalContent">
+        <div className="p-4">
+          <ul>
+            <li>
+              <Link to="/recipes">
+                <span className="text-muted">Recipes</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/foodNews">
+                <span className="text-muted">Food News</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/informVids">
+                <span className="text-muted">Informative Videos</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/motivation">
+                <span className="text-muted">Keep Going!</span>
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>

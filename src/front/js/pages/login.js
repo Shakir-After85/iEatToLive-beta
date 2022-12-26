@@ -45,7 +45,7 @@ export const Login = () => {
               Keep me signed in
             </label>
           </div>
-          <Link to="/login">SignUp</Link>
+          <Link to="/signup">SignUp</Link>
         </div>
         <button type="submit" className="btn btn-primary">
           Submit

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Map from "./googlemap.js";
 import { FoodMarketGa } from "../pages/foodMarketGa";
 import { FoodMarketNy } from "../pages/foodMarketNy";
+import { Context } from "../store/appContext.js";
 
 export const HomeByCity = (props) => {
+  const { store, actions } = useContext(Context);
   const MarketChooser = () => {
     switch (props.city) {
       case "NY":
@@ -14,7 +16,7 @@ export const HomeByCity = (props) => {
         return <div>Miami market coming soon</div>;
     }
   };
-
+  console.log(store.recipes);
   return (
     <div className="bg-white text-center mt-5 mx-5 h-auto">
       <h1 className="home-title">iEatToLive {props.city}</h1>

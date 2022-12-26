@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { Context } from "../store/appContext";
 export const SignUp = () => {
+  const { store, actions } = useContext(Context);
   const navigate = useNavigate();
+  const [data, setData] = useState({ first_name: "" });
   function handleSubmit() {
+    actions.signup(data);
     navigate("/login");
   }
+  const handleOnClick = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+  console.log(data);
+  console.log(store.user);
   return (
     <div className="container w-50 pt-5">
       <form onSubmit={handleSubmit} className="bg-white mt-5 p-5">
@@ -12,13 +21,25 @@ export const SignUp = () => {
           <label for="exampleInputEmail1" className="form-label">
             First Name
           </label>
-          <input type="text" aria-label="First name" class="form-control" />
+          <input
+            type="text"
+            aria-label="First name"
+            class="form-control"
+            name="first_name"
+            onChange={handleOnClick}
+          />
         </div>
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
             Last Name
           </label>
-          <input type="text" aria-label="Last name" class="form-control" />
+          <input
+            type="text"
+            aria-label="Last name"
+            class="form-control"
+            name="last_name"
+            onChange={handleOnClick}
+          />
         </div>
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
@@ -29,6 +50,8 @@ export const SignUp = () => {
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
+            name="email"
+            onChange={handleOnClick}
           />
           <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.
@@ -42,6 +65,8 @@ export const SignUp = () => {
             type="password"
             className="form-control"
             id="exampleInputPassword1"
+            name="password"
+            onChange={handleOnClick}
           />
         </div>
         <div className="mb-3 form-check">

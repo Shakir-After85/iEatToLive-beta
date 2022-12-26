@@ -29,8 +29,35 @@ const getState = ({ getStore, getActions, setStore }) => {
           ],
         },
       ],
+      user: null,
     },
-    actions: {},
+    actions: {
+      getRecipes: async () => {
+        fetch(
+          "https://3001-shakirafter-ieattoliveb-tovxv2gettq.ws-us80.gitpod.io/api/recipes"
+        )
+          .then((response) => response.json())
+          .then((data) => setStore({ recipes: data.recipes }))
+          .catch((error) => console.log(error));
+      },
+      signup: async (data) => {
+        fetch(
+          "https://3001-shakirafter-ieattoliveb-tovxv2gettq.ws-us80.gitpod.io/api/signup",
+          {
+            method: "POST",
+
+            headers: {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+            body: JSON.stringify(data),
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => setStore({ user: data.user }))
+          .catch((error) => console.log(error));
+      },
+    },
   };
 };
 

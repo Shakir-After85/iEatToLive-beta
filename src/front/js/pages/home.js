@@ -7,6 +7,7 @@ import { HomeByCity } from "../component/HomebyCity";
 export const Home = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();
+
   switch (params.city) {
     case "ny-city":
       return <HomeByCity lat={40.73061} lng={-73.935242} zoom={10} city="NY" />;

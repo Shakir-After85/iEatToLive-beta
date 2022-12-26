@@ -1,6 +1,6 @@
 import react from "react";
 
-export const InforVids = () => {
+export const InformVids = () => {
   return (
     <div>
       <h1>

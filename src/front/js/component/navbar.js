@@ -29,10 +29,15 @@ export const Navbar = () => {
       </div>
 
       <div className="container">
+
         <Link to="/city-selector">
           <span className="navbar-brand mb-0 h1">iEatToLive </span>
+
+        <Link to="/">
+          <span className="navbar-brand mb-0 h1"> iEatToLive </span>
+
         </Link>
-        <span> Healthier Life. Better Living </span>
+        
         <div className="ml-auto">
           <button onClick={() => logOut()} className="btn btn-primary">
             Log Out

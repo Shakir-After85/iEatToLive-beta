@@ -34,7 +34,7 @@ class Recipes(db.Model):
     name= db.Column(db.String(120), unique=True, nullable=False)
     # ingredients = db.Column(db.String(80), unique=False, nullable=False)
     cook_time = db.Column(db.String(80), unique=False, nullable=False)
-    description = db.Column(db.String(250), unique=False, nullable=False)
+    description = db.Column(db.String(550), unique=False, nullable=False)
     image_link = db.Column(db.String(550), unique=False, nullable=False)
     # user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     # user = db.relationship("User", back_populates="favorites")
@@ -48,7 +48,8 @@ class Recipes(db.Model):
             "name": self.name,
             # "ingredients": list(map(lambda x: x.serialize(), self.ingredients)),
             
-            "cook time" : self.cook_time,
-            "description" : self.description
+            "cook_time" : self.cook_time,
+            "description" : self.description,
+            "img_link": self.image_link
             # do not serialize the password, its a security breach
         }

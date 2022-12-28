@@ -11,22 +11,21 @@ export const Recipes = () => {
         {store?.recipes.map((item, index) => {
           return (
             <div className="card flex-row my-2">
-              <img
-                src={item.image_link}
-                className="card-img-top w-50"
-                alt="..."
-              />
-              <div>
-                {" "}
+              <div className="w-25">
+                <img src={item.img_link} className="card-img-top" alt="..." />
+              </div>
+
+              <div className="w-75">
                 <div className="card-body">
-                  <h5 className="card-title">{item.name}</h5>
+                  <h4 className="card-title">{item.name}</h4>
+                  <h6 className="card-text">{item.cook_time}</h6>
                   <p className="card-text">{item.description}</p>
                 </div>
-                <ul className="list-group list-group-flush">
+                {/* <ul className="list-group list-group-flush">
                   <li className="list-group-item">ingredient 1</li>
                   <li className="list-group-item">ingredient 2</li>
                   <li className="list-group-item">ingredient 3</li>
-                </ul>
+                </ul> */}
               </div>
             </div>
           );

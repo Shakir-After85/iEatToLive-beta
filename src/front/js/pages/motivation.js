@@ -1,10 +1,10 @@
-import react from "react";
+import React from "react";
 
 export const Motivation = () => {
   return (
-    <div>
+    <div className="container bg-light mt-5 p-5 text-center">
       <h1>You Got This!</h1>
-      <p>
+      <p className="m-5">
         You got this! I know how hard it may sometimes feel to stay on track,
         epecially when life happens. However, every time you do happen to feel
         that way, every time its starting to feel as if its getting to be too

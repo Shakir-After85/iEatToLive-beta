@@ -10,14 +10,15 @@ api = Blueprint('api', __name__)
 
 @api.route('/signup', methods=['POST'])
 def handle_signup():
-    body = request.json # get the request body content
+    body=request.json
     email = request.json.get('email')
     first_name = request.json.get('first_name')
     last_name = request.json.get('last_name')
     password = request.json.get('password')
     
-    if body is None:
-        return "The request body is null", 400
+    if not body:
+        return 'You need to enter data',400
+
     if not email:
         return 'You need to enter an email',400
     if not first_name:

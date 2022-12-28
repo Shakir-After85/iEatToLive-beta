@@ -1,0 +1,39 @@
+{
+  "recipes": [
+    {
+      "cook_time": "5min (Fry) 25-30min (Bake)",
+      "description": "Ingredients: 1 cup dried chickpeas | 1/2 cup onion, chopped | 1 cup parsley | 1 small green chile pepper, serrano or jalapeno pepper | 3 garlic cloves | 1 tsp cumin | 1 tsp salt | 1/2 tsp cardamom | 1/4 tsp black pepper | 2 tbsp chickpea flour | 1/2 tsp baking soda | avocado oil for frying ",
+      "id": 6,
+      "img_link": "https://images.pexels.com/photos/6275189/pexels-photo-6275189.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Falafel"
+    },
+    {
+      "cook_time": "20min (Prep)",
+      "description": "Ingredients: Lettuce | Cucumber | Tomatoes | Bell pepper | Kalamata olives | Pepperoncini | Garbanzo beans | Feta cheese | Za\u2019atar Lemon vinaigrette ",
+      "id": 8,
+      "img_link": "https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Greek Salad"
+    },
+    {
+      "cook_time": "15min",
+      "description": "Ingredients: 1/4 cup (60ml) Extra virgin olive oil |1 Onion, finely chopped | 4 Garlic cloves, thinly sliced | 3/4 cup (210g) Tomato paste | 1/2 cup (125ml) Vodka | 1/4 cup (60ml) Thickened cream |1/2 cup (40g) Finely grated parmesan | 400g Rigatoni, cooked to packet instructions | 1/4 cup (60ml) Cooking water reserved",
+      "id": 9,
+      "img_link": "https://assets.bonappetit.com/photos/5a8da4996497380283798c16/1:1/w_2872,h_2872,c_limit/rigatoni-with-vodka-sauce.jpg",
+      "name": " Tomato Vodka Rigatoni"
+    },
+    {
+      "cook_time": "30 - 35min",
+      "description": "Ingredients: 1 cup Dried Chickpeas | 1 cup Maitake mushrooms | 1/2 cup Chopped onions | 1 Tbs onion &garlic powder | 1/2 Tbs salt & black pepper | 1tsp Cumin | 1tsp Old Bay | 1tsp Paprika | 1/2 tsp coriander ",
+      "id": 7,
+      "img_link": "https://images.pexels.com/photos/3607284/pexels-photo-3607284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Veggie Burgers "
+    },
+    {
+      "cook_time": "20min ",
+      "description": "Ingredients: Brown Rice | Broccoli | Kale | Spinach | Carrots | Maitake mushroooms | Onions | Choice of Sauce ",
+      "id": 10,
+      "img_link": "https://therecipecritic.com/wp-content/uploads/2019/08/vegetable_stir_fry.jpg",
+      "name": "Vegetable Stir Fry"
+    }
+  ]
+}

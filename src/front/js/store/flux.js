@@ -2,34 +2,43 @@ const getState = ({ getStore, getActions, setStore }) => {
   // let backendUrl=
   return {
     store: {
-      recipes: [
+      recipes: [],
+      restaurants: [
         {
-          id: 1,
-          name: "Thyme Steak",
-          ingredients: [
-            {
-              name: "thyme",
-              quantity: 1,
-              unit: "tbsp",
-            },
-            {
-              name: "New York strip steak",
-              quantity: 1,
-              unit: "N/A",
-            },
-            {
-              name: "salt",
-              quantity: 1,
-              unit: "tbsp",
-            },
-            {
-              name: "black pepper",
-              quantity: 1,
-              unit: "tbsp",
-            },
-          ],
+          name: "Tony's Pizza and Deli",
+          address: "Georgia, ATL",
+          phone: "555-555-5555",
+          hours: "8:00 am - 9:00 pm",
+          Menu: [],
+          services: "Dine-in and take-out",
+          rating: "4.2",
+          img_link:
+            "https://media.cntraveler.com/photos/5a8453eb86e4b63c297d47fb/16:9/w_2560,c_limit/Tony%E2%80%99s-Pizza-Napoletana_Tony-Gemignani_2018_Tonys_Exterior_sign.jpg",
+        },
+        {
+          name: "Tacos Manuel",
+          address: "Georgia, ATL",
+          phone: "555-555-5555",
+          hours: "11:00 am - 9:00 pm",
+          Menu: [],
+          services: "Dine-in and take-out",
+          rating: "4.5",
+          img_link:
+            "https://s3-media0.fl.yelpcdn.com/bphoto/4CmHQiflbfNTTz--HfzAyg/348s.jpg",
+        },
+        {
+          name: "Piñones",
+          address: "Georgia, ATL",
+          phone: "555-555-5555",
+          hours: "8:00 am - 9:00 pm",
+          Menu: [],
+          services: "Dine-in and take-out",
+          rating: "4.2",
+          img_link:
+            "https://media-cdn.tripadvisor.com/media/photo-s/07/7d/a7/32/waterfront-lo-mejor.jpg",
         },
       ],
+
       user: null,
     },
     actions: {

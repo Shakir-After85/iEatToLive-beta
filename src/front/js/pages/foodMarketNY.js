@@ -2,10 +2,9 @@ import React from "react";
 import "../../styles/foodMarketGa.css";
 import { Link } from "react-router-dom";
 
-export const FoodMarketGa = () => {
+export const FoodMarketNY = () => {
   return (
     <div className="text-center bg-white">
-      <Link to="/restaurants/Atlanta"> link to restaurantList</Link>
       <div className=" ">
         <Link className="foodMarket" to="/">
           <img

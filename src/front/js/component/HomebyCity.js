@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import Map from "./googlemap.js";
+import Map from "./googlemap";
 import { FoodMarketGa } from "../pages/foodMarketGa";
-import { FoodMarketNy } from "../pages/foodMarketNy";
+import { FoodMarketNY } from "../pages/foodMarketNY";
 import { Context } from "../store/appContext.js";
 
 export const HomeByCity = (props) => {
@@ -9,7 +9,7 @@ export const HomeByCity = (props) => {
   const MarketChooser = () => {
     switch (props.city) {
       case "NY":
-        return <FoodMarketNy />;
+        return <FoodMarketNY />;
       case "ATL":
         return <FoodMarketGa />;
       default:

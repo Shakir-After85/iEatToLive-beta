@@ -23,13 +23,11 @@ export default function Map() {
   // This returns while map is being loaded
   if (!isLoaded) return <div>Loading...</div>;
   return (
-    (<Search />),
-    (
-      <GoogleMap
-        zoom={10}
-        center={{ lat: props.lat, lng: props.lng }}
-        mapContainerClassName="map-container"
-      />
-    )
+    // (<Search />),
+    <GoogleMap
+      zoom={10}
+      center={{ lat: props.lat, lng: props.lng }}
+      mapContainerClassName="map-container"
+    />
   );
 }

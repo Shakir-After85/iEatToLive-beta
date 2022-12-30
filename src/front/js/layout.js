@@ -16,8 +16,8 @@ import { Recipes } from "./pages/recipes";
 
 import { FoodNews } from "./pages/foodNews";
 import { InformVids } from "./pages/informVids";
-import { RestaurantsGa } from "./pages/restaurantsGa";
-import { RestaurantsNy } from "./pages/restaurantsNy";
+import RestaurantList from "./pages/restaurantList";
+// import { RestaurantsNy } from "./pages/restaurantsNy";
 import { Motivation } from "./pages/motivation";
 
 //create your first component
@@ -40,8 +40,8 @@ const Layout = () => {
             <Route element={<SignUp />} path="/signup" />
             <Route element={<FoodNews />} path="/food-news" />
             <Route element={<InformVids />} path="/informative-videos" />
-            <Route element={<RestaurantsGa />} path="/restaurants-georgia" />
-            <Route element={<RestaurantsNy />} path="/restaurants-Newyork" />
+            <Route element={<RestaurantList />} path="/restaurants/:city" />
+
             <Route element={<Motivation />} path="/motivation" />
 
             <Route element={<h1>Not found!</h1>} />

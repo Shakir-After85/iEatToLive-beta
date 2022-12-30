@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Map from "./googlemap.js";
+import Map from "./googleMapComponent";
 import { FoodMarketGa } from "../pages/foodMarketGa";
 import { FoodMarketNy } from "../pages/foodMarketNy";
 import { Context } from "../store/appContext.js";

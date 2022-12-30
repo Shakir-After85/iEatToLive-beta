@@ -7,7 +7,7 @@ from api.utils import generate_sitemap, APIException
 
 api = Blueprint('api', __name__)
 
-
+# Signup route
 @api.route('/signup', methods=['POST'])
 def handle_signup():
     body=request.json
@@ -48,7 +48,7 @@ def handle_signup():
 
     return jsonify(payload), 200
 
-
+#login route
 @api.route('/login', methods=['POST'])
 def handle_login():
     email = request.json.get("email", None)
@@ -73,7 +73,7 @@ def handle_login():
     return jsonify(payload), 200
 
 
-
+# recipes route
 @api.route('/recipes', methods=['GET'])
 def handle_recipes():
     recipes = Recipes.query.all()
@@ -87,15 +87,52 @@ def handle_recipes():
     return jsonify(payload), 200
 
 
-# # # @api.route('/recipes', methods=['GET'])
-# # # def handle_login():
-# # #     recipes = Recipes.query.all()
-# # #     serialized_recipes = [item.serialize() for item in recipes]
-# # #     # access_token = create_access_token(identity=email)
-# # #     payload = {
-# # #         # 'token': access_token.decode("utf-8"),
-# # #         'recipes': serialized_recipes
-# #     }
+# Favorites page end points
+@api.route('/list_favorites/user/<user_id>', methods=['PUT', 'DELETE'])
+def handle_favorites(user_id):
+    favorites = request.get_json()
 
-#     return jsonify(payload), 200
-  
+    # Add Favorites 
+    if request.method == 'PUT':
+        user = User.query.get(user_id)
+        print("!!FAVORITES: ", list_favorites)
+
+        try:
+            user.list_favorites = []
+            userFavorites = Recipe.query.get(favorite["recipes"]["id"])
+            user.favorties.append(userFavorites)
+        
+        except Exception as e:
+            payload = {
+                'msg': "Couldn't add Favorite. Try again later.",
+                'error': e
+            }
+            return jsonify(payload), 409
+
+        db.session.commit()
+
+        payload = {
+            'msg': "Favorite saved",
+            'user': user.serialize()
+        }
+        return jsonify(payload), 200
+
+
+    # Delete Bookmarks
+    if request.method == 'DELETE':
+        user = User.query.get(user_id)
+        recipes = Recipes.query.get(list_favorites["recipes_id"])
+
+        user.list_favorites.remove(recipes)
+        db.session.commit()
+
+        return "Removed", 200
+
+
+@api.route('/list_favorites/user/<user_id>', methods=['GET'])
+def get_all_favorites(user_id):
+
+    user = User.query.get(user_id)
+
+    serialized_favorites = [item.serialize() for item in user.list_favorites]
+    return jsonify(serialized_list_favorites), 200

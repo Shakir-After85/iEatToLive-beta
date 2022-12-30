@@ -32,6 +32,10 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((data) => setStore({ user: data.user }))
           .catch((error) => console.log(error));
       },
+      //fetching Data from backend
+      getFavoritesData: () => {
+        let user;
+      },
     },
   };
 };

@@ -50,6 +50,22 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((data) => setStore({ recipes: data.recipes }))
           .catch((error) => console.log(error));
       },
+      findRestaurants: (queryParameters) => {
+        let milesToKm = getActions().milesToKm;
+        fetch(
+          `https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=vegan&location=${
+            queryParameters.lat
+          }%2C${queryParameters.lng}&radius=${milesToKm(
+            queryParameters.miles
+          )}&type=restaurant&key=AIzaSyCa1yoVQ6mqB2kjzQ8zYVmTE2nXL78_W0M`
+        )
+          .then((response) => response.json())
+          .then((data) => setStore({ restaurants: data.results }));
+      },
+      milesToKm: (miles) => {
+        return miles * 1.609344;
+      },
+
       signup: async (data) => {
         fetch(
           "https://3001-shakirafter-ieattoliveb-tovxv2gettq.ws-us80.gitpod.io/api/signup",

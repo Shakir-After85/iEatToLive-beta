@@ -23,7 +23,7 @@ const RestaurantList = () => {
               <div className="w-75">
                 <div className="card-body">
                   <h4 className="card-title">{restaurant.name}</h4>
-                  <h6 className="card-text">{restaurant.address}</h6>
+                  <h6 className="card-text">{restaurant.vicinity}</h6>
                   <p className="card-text">
                     <i class="fa-solid fa-star"></i>
                     {restaurant.rating}

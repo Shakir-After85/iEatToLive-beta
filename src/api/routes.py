@@ -118,7 +118,7 @@ def handle_favorites(user_id):
         return jsonify(payload), 200
 
 
-    # Delete Bookmarks
+    # Delete favorites
     if request.method == 'DELETE':
         user = User.query.get(user_id)
         recipes = Recipes.query.get(list_favorites["recipes_id"])

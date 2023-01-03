@@ -48,6 +48,8 @@ def handle_signup():
 
     return jsonify(payload), 200
 
+
+
 #login route
 @api.route('/login', methods=['POST'])
 def handle_login():
@@ -87,21 +89,30 @@ def handle_recipes():
     return jsonify(payload), 200
 
 
+
 # Favorites page end points
 @api.route('/list_favorites/user/<user_id>', methods=['PUT', 'DELETE'])
 def handle_favorites(user_id):
-    favorites = request.get_json()
+    body = request.get_json()
+    print("!!!This is the body", body["recipe"]["id"])
 
     # Add Favorites 
     if request.method == 'PUT':
-        user = User.query.get(user_id)
-        print("!!FAVORITES: ", list_favorites)
-
+        user = User.query.filter_by(id=user_id).first()
+        print("!!!this is the user", user)
+              
         try:
-            user.list_favorites = []
-            userFavorites = Recipe.query.get(favorite["recipes"]["id"])
-            user.favorties.append(userFavorites)
-        
+            if len(user.list_favorites)>0: 
+                newFavoriteRecipe = Recipes.query.filter_by(id=body["recipe"]["id"]).first()
+                print("!!!this is the newfavorite true", newFavoriteRecipe)
+                user.list_favorites.append(newFavoriteRecipe)
+                print("!!!this is the favorites list",  user.list_favorites)
+            # else:
+            #     newFavoriteRecipe = Recipes.query.filter_by(id=body["recipe"]["id"]).first()
+            #     print("!!!this is the newFavorite false",  user.list_favorites)
+            #     # user.list_favorites = []
+            #     user.list_favorites.append(userFavorites)
+            #     print("!!!this is the favorites list",  user.list_favorites)
         except Exception as e:
             payload = {
                 'msg': "Couldn't add Favorite. Try again later.",
@@ -116,7 +127,7 @@ def handle_favorites(user_id):
             'user': user.serialize()
         }
         return jsonify(payload), 200
-
+        # return "success"
 
     # Delete favorites
     if request.method == 'DELETE':

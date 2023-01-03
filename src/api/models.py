@@ -24,7 +24,9 @@ class User(db.Model):
         return {
             "id": self.id,
             "email": self.email,
-            "favorites": list(map(lambda x: x.serialize(), self.favorites)),
+            "first_name": self.first_name,
+            "last_name": self.last_name,
+            "list_favorites": list(map(lambda x: x.serialize(), self.list_favorites)),
             # do not serialize the password, its a security breach
         }
 
@@ -50,6 +52,6 @@ class Recipes(db.Model):
             
             "cook_time" : self.cook_time,
             "description" : self.description,
-            "img_link": self.image_link
+            "image_link": self.image_link
             # do not serialize the password, its a security breach
         }

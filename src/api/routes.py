@@ -94,7 +94,7 @@ def handle_recipes():
 @api.route('/list_favorites/user/<user_id>', methods=['PUT', 'DELETE'])
 def handle_favorites(user_id):
     body = request.get_json()
-    print("!!!This is the body", body["recipe"]["id"])
+    print("!!!This is the body", body["id"])
 
     # Add Favorites 
     if request.method == 'PUT':
@@ -103,16 +103,14 @@ def handle_favorites(user_id):
               
         try:
             if len(user.list_favorites)>0: 
-                newFavoriteRecipe = Recipes.query.filter_by(id=body["recipe"]["id"]).first()
+                newFavoriteRecipe = Recipes.query.filter_by(id=body["id"]).first()
                 print("!!!this is the newfavorite true", newFavoriteRecipe)
                 user.list_favorites.append(newFavoriteRecipe)
                 print("!!!this is the favorites list",  user.list_favorites)
-            # else:
-            #     newFavoriteRecipe = Recipes.query.filter_by(id=body["recipe"]["id"]).first()
-            #     print("!!!this is the newFavorite false",  user.list_favorites)
-            #     # user.list_favorites = []
-            #     user.list_favorites.append(userFavorites)
-            #     print("!!!this is the favorites list",  user.list_favorites)
+            
+            elif len(user.list_favorites)== 0: 
+                user.list_favorites.append(body)
+                print("!!!this is the favorites list",  user.list_favorites)
         except Exception as e:
             payload = {
                 'msg': "Couldn't add Favorite. Try again later.",

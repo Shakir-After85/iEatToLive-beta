@@ -76,5 +76,53 @@
     "description": " 1/4 recipe Creamy Garlic Mashed Red Potatoes (made in advance) | 1 Tbsp avocado oil | 1 cup baby carrots | 2 cups mushrooms | 2 cups spinach",
     "image_link": "https://www.jaroflemons.com/wp-content/uploads/2017/12/Vegan-Loaded-Mashed-Potato-Bowls-4-765x1148.jpg",
     "name": "Loaded Mashed Potato Bowl"
+  },
+  {
+    "cook_time": "5min",
+    "description": "Ingredients: 3 cups Baby Spinach | 1 Tbsp Finely chopped red onion | 1/2 cup Sliced Strawberries | 2 Tbsp vinaigrette | 1/4 medium Avocado, diced | 2 Tbsp toasted walnut pieces",
+    "image_link": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2019%2F08%2F27045009%2F6599311.jpg",
+    "name": "Strawberry Spinach Salad with Avocado & Walnuts"
+  },
+  {
+    "cook_time": "20min with 10min Prep",
+    "description": "Ingredients: 6oz dried farfalle (bow-tie pasta) | 1 Tbsp olive oil | 1 medium onion, chopped | 1 cup sliced portobello or other fresh mushrooms | 2 cloves garlic, minced | 4 cup thinly sliced fresh spinach | 1 tsp snipped fresh thyme | 1/8 tsp pepper | 2 Tbsp shredded Parmesan cheese",
+    "image_link": "https://www.bhg.com/thmb/HlSnJiNbW_E69L-dQlYypA1ZA4Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/R087887-5caf7a113b9e4edc8f1bef9fc3c718fb.jpg",
+    "name": "Farfalle with Mushrooms and Spinach"
+  },
+  {
+    "cook_time": "30min",
+    "description": "Ingredients: 2 Salmon filets, thawed | 1/4 tsp Crushed Garlic | 1/4 tsp Oregano | 1/4 tsp Paprika | 1/8 tsp Cayenne | 1 tsp Black Pepper | 1/8 tsp Sea Salt | 4 Corn tortillas | 1 cup Shredded Red Cabbage | 1/4 cup Corn, canned | 1 Tbsp Cilantro (optional)",
+    "image_link": "https://www.jaroflemons.com/wp-content/uploads/2017/03/30-Minute-Blackened-Salmon-Tacos-5-765x1148.jpg",
+    "name": "Blackened Salmon Tacos"
+  },
+  {
+    "cook_time": "1 hour 15min",
+    "description": "Ingredients: Bunch of Power Greens(Kale & Spinach) | 1 cup of Mushrooms | 1/4 Onion (chopped) | 2 Zucchini (medium) | 1 Summer Squash (medium) | 15 oz. Whole Tomatoes (canned) | 10 oz. Tomato sauce | 1/2 tsp Garlic powder | 1/2 tsp Dried Parsley | 1 tsp dried Basil | 6 uncooked Lasagna Noodles | 10 oz. Cottage Cheese (small curd) | 1/2 cup Parmesan (grated) | 1 cup mozzarella (shredded) | salt/pepper",
+    "image_link": "https://www.jaroflemons.com/wp-content/uploads/2018/04/The-BEST-Easy-Healthy-Lasagna-Recipe-2-2-765x1148.jpg",
+    "name": "The BEST Easy Healthy Lasagna Recipe"
+  },
+  {
+    "cook_time": "10min with 2min Prep",
+    "description": "Ingredients: 4 Pita Bread | 6 oz Tomato sauce | 2 Small Tomatoes | 1 cup Lettuce | 3/4 cup fresh basil | 6 oz . fresh mozzarella",
+    "image_link": "https://www.jaroflemons.com/wp-content/uploads/2016/06/Margherita-Pita-Bread-Pizzas-1.jpg",
+    "name": "10-Minute Margherita Pita Bread Pizzas"
+  },
+  {
+    "cook_time": "10min",
+    "description": "Ingredients: 1 Large Avocado | 1/2 cup Spinach leaves | 1/4 cup Olive Oil | 1/4 cup unsweetened Cashew Milk | 2 tsp Dried Basil | 1 tsp Garlic Powder | Salt/Pepper (to taste)",
+    "image_link": "https://www.jaroflemons.com/wp-content/uploads/2019/05/10-Minute-Avocado-Pasta-Sauce-2-765x1148.jpg",
+    "name": "10-Minute Avocado Pasta Sauce"
+  },
+  {
+    "cook_time": "15min Cook time with 15min Prep",
+    "description": "Ingredients: For the Grain - Seasoned Quinoa | White or Brown Rice (season like the quinoa) | Farro | Bulgur Wheat |Millet || For the grain bowl - 2 15oz can chickpeas | 2 small garlic cloves | 2 Tbsp olive oil | 1/2 tsp smoked paprika or regular paprika | 1 tsp kosher salt | 1 recipe Tahini Sauce | 1 pint cherry tomatoes | 1 English cucumber | ½ cup Kalamata olives (optional) | 1/4 red onion",
+    "image_link": "https://www.acouplecooks.com/wp-content/uploads/2020/09/Grain-Bowl-064-368x368.jpg",
+    "name": "Easy Grain Bowl"
+  },
+  {
+    "cook_time": "20min Cook time with 15min Prep",
+    "description": "Ingredients: 2 cups cooked Spanish Rice (or 2 cups cooked rice mixed with salsa, to taste) | 2 large portobello mushroom caps | 1/2 Medium Red Onion | 1 orange bell pepper | 2 15oz cans black beans, drained and rinsed | 2 Tbsp olive oil | 2 Tsp cumin | 1 Tsp garlic powder | 1 Tsp onion powder | 1 Tsp smoked paprika | 1 Tsp kosher salt | 2 Tbsp lime juice | 1 avocado | 4 large flour tortillas or gluten-free tortillas",
+    "image_link": "https://www.acouplecooks.com/wp-content/uploads/2020/04/Vegan-Burritos-003s-368x368.jpg",
+    "name": "Vegan Burrito"
   }
 ]

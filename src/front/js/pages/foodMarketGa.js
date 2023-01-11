@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const FoodMarketGa = () => {
   return (
     <div className="text-center bg-white">
-      <Link to="/restaurants/Atlanta"> link to restaurantList</Link>
+      {/* <Link to="/restaurants/Atlanta"> link to restaurantList</Link> */}
       <div className=" ">
         <Link className="foodMarket" to="/">
           <img

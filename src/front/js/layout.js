@@ -16,7 +16,7 @@ import { Recipes } from "./pages/recipes";
 
 import { FoodNews } from "./pages/foodNews";
 import { InformVids } from "./pages/informVids";
-import RestaurantList from "./pages/restaurantList";
+
 // import { RestaurantsNy } from "./pages/restaurantsNy";
 import { Motivation } from "./pages/motivation";
 
@@ -40,7 +40,6 @@ const Layout = () => {
             <Route element={<SignUp />} path="/signup" />
             <Route element={<FoodNews />} path="/food-news" />
             <Route element={<InformVids />} path="/informative-videos" />
-            <Route element={<RestaurantList />} path="/restaurants/:city" />
 
             <Route element={<Motivation />} path="/motivation" />
 

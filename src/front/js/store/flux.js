@@ -74,6 +74,36 @@ const getState = ({ getStore, getActions, setStore }) => {
             })
           );
       },
+      deleteFavorite: (recipes) => {
+        let userObj = JSON.parse(sessionStorage.getItem("iEatToLive_user"));
+        let user_id = userObj["id"];
+        let recipes_id = recipes["id"];
+
+        let payload = {
+          recipes_id: recipes_id,
+        };
+
+        console.log("Payload: ", payload);
+
+        return fetch(`${base_url}/api/favorites/user/${user_id}`, {
+          method: "DELETE",
+          // headers: {
+          //   "Content-Type": "application/json"
+          // },
+          body: JSON.stringify(payload),
+        })
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) =>
+            setStore({
+              user: {
+                ...data.user,
+                loggedIn: true,
+              },
+            })
+          );
+      },
     },
   };
 };

@@ -1,8 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 
 export const Recipes = () => {
   const { store, actions } = useContext(Context);
+  useEffect(() => {
+    actions.getRecipes();
+    console.log(store);
+  }, []);
   return (
     <div className="bg-white pb-5 mt-5 mx-5">
       <h1 className="text-center">Recipes</h1>
@@ -12,7 +16,7 @@ export const Recipes = () => {
           return (
             <div className="card flex-row my-2">
               <div className="w-25">
-                <img src={item.img_link} className="card-img-top" alt="..." />
+                <img src={item.image_link} className="card-img-top" alt="..." />
               </div>
 
               <div className="w-75">

@@ -66,6 +66,48 @@ export const Navbar = () => {
           </ul>
         </div>
       </div>
+
+      {/* <div className="ml-auto">
+        <div className="dropdown">
+          <button
+            className="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Favorites
+          </button>
+          <ul
+            className="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdownMenuButton1"
+          >
+            {store.favorites.map((favorite, index) => {
+              return (
+                <li key={index} className="d-flex justify-content-between">
+                  <p
+                    className="dropdown-item"
+                    onClick={() => {
+                      actions.getRecipes(favorite.url);
+                      history.push("/recipes");
+                    }}
+                  >
+                    {favorite.name}
+                  </p>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => actions.deleteRecipes(index)}
+                  >
+                    {" "}
+                    <i className="fa-solid fa-trash-can"> </i>
+                    <i className="fas fa-trash"></i>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div> */}
     </nav>
   );
 };

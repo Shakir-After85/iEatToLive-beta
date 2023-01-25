@@ -11,7 +11,7 @@ export const CitySelector = () => {
             className="img-fluid img-center citySelection-img"
             src="https://media.istockphoto.com/id/1169074379/photo/the-statue-of-liberty-with-the-one-world-trade-building-center-over-hudson-river-and-new-york.jpg?s=612x612&w=0&k=20&c=iWNDPCFj4v8uyXb_L-EV35yqmNJAJNpB4nFDqZNdIRc="
           />
-          <h1 className="citySelection-h1">NY City</h1>
+          <h1 className="citySelection-h1">NY </h1>
         </Link>
       </div>
       <div className="col-4 ">

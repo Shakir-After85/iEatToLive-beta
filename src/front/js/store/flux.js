@@ -8,7 +8,9 @@ const getState = ({ getStore, getActions, setStore }) => {
     },
     actions: {
       getRecipes: async () => {
-        fetch(backendUrl + "/api/recipes")
+        fetch(
+          "https://3001-shakirafter-ieattoliveb-79dsztt5xzh.ws-us84.gitpod.io/api/recipes"
+        )
           .then((response) => response.json())
           .then((data) => setStore({ recipes: data.recipes }))
           .catch((error) => console.log(error));
